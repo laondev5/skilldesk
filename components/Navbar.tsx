@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { MenuIcon, Bell } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import Image from "next/image";
 
 const navItem = [
   { name: "Home", link: "/" },
@@ -15,7 +16,20 @@ const Navbar = () => {
     <header className="py-2 z-[10] sticky top-0 left-0 bg-white">
       <Container>
         <div className="flex justify-between items-center">
-          <div className="ml-2 lg:ml-0">Logo</div>
+          <div className="ml-2 lg:ml-0">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-gray-900 dark:text-gray-100"
+            >
+              <Image
+                src="/logo.svg"
+                alt="logo"
+                width={100}
+                height={100}
+                className="w-[5rem]"
+              />
+            </Link>
+          </div>
           {/* desktop navbar */}
           <div className="hidden lg:flex space-x-4">
             {navItem.map((route, i) => (
@@ -33,7 +47,7 @@ const Navbar = () => {
               <Button asChild variant="ghost">
                 <Link href="/login">Login</Link>
               </Button>
-              <Button asChild variant ="main">
+              <Button asChild variant="main">
                 <Link href="/register">Register</Link>
               </Button>
             </div>

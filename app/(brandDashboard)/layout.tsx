@@ -19,7 +19,7 @@ export default function AboutLayout({
         <div className="flex relative">
           {/* desktop */}
           <div className=" hidden lg:flex w-[20%] fixed top-0 left-0 h-screen bg-[#091736]">
-            <BrandSideBar mobileOpen={mobileOpen} />
+            <BrandSideBar />
           </div>
           {/* mobile */}
           <div
@@ -29,12 +29,13 @@ export default function AboutLayout({
                 : "hidden"
             }
           >
-            <BrandSideBar mobileOpen={mobileOpen} />
+            <BrandSideBar />
           </div>
-          <div className="w-[100%] bg-gray-50 h-[2000px]">{children}</div>
+          <div className="w-[100%] flex bg-gray-50 ">
+            <div className="w-[20%] hidden lg:block"></div>
+            <div className="w-[100%] lg:w-[80%] py-4">{children}</div>
+          </div>
         </div>
-
-        {children}
       </body>
     </html>
   );
