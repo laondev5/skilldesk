@@ -3,15 +3,15 @@ import React, { useState } from "react";
 import BrandSideBar from "@/components/brandComponents/BrandSideBar";
 import BrandNavbar from "@/components/brandComponents/BrandNavbar";
 
-// interface MyComponentState {
-//   mobileOpen: boolean;
-// }
+interface MyComponentState {
+  mobileOpen: boolean;
+}
 export default function AboutLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   return (
     <html lang="en">
       <body className="w-full">

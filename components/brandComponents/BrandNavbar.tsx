@@ -7,7 +7,12 @@ import { Bell } from "lucide-react";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
 import Image from "next/image";
-const BrandNavbar = ({ mobileOpen, setMobileOpen }) => {
+const BrandNavbar = ({
+  mobileOpen,
+  setMobileOpen,
+}: {
+  mobileOpen: boolean;
+}) => {
   const handleMobileIcon = () => {
     setMobileOpen(!mobileOpen);
   };
