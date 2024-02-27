@@ -7,11 +7,14 @@ import { Bell } from "lucide-react";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
 import Image from "next/image";
-const BrandNavbar = ({
+
+interface AnotherComponentProps {
+  mobileOpen: boolean;
+  setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const BrandNavbar: React.FC<AnotherComponentProps> = ({
   mobileOpen,
   setMobileOpen,
-}: {
-  mobileOpen: boolean;
 }) => {
   const handleMobileIcon = () => {
     setMobileOpen(!mobileOpen);
