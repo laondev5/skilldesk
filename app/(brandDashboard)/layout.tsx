@@ -25,7 +25,7 @@ export default function AboutLayout({
           <div
             className={
               mobileOpen
-                ? "w-[70%] flex lg:hidden absolute top-0 left-0  h-screen bg-[#091736] transition-all ease-in-out duration-300"
+                ? "w-[70%] flex lg:hidden fixed top-0 left-0 z-10 h-screen bg-[#091736] transition-all ease-in-out duration-300"
                 : "hidden"
             }
           >

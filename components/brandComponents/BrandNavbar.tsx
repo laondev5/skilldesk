@@ -19,7 +19,7 @@ const BrandNavbar: React.FC<AnotherComponentProps> = ({
     setMobileOpen(!mobileOpen);
   };
   return (
-    <div className="sticky top-0 z-10 bg-white shadow-md">
+    <div className="sticky top-0 z-20 bg-white shadow-md">
       <Container>
         <div className="flex items-center justify-between h-16">
           <div className="flex  items-center space-x-4">
