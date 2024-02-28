@@ -1,4 +1,4 @@
-import { LayoutDashboard, FilePlus } from "lucide-react";
+import { LayoutDashboard, FilePlus, Briefcase } from "lucide-react";
 interface BrandNavInterface {
   label: string;
   path: string;
@@ -7,4 +7,5 @@ interface BrandNavInterface {
 export const RouteLink: BrandNavInterface[] = [
   { label: "Dashboard", path: "/home", icon: <LayoutDashboard /> },
   { label: "Add Job", path: "/createTask", icon: <FilePlus /> },
+  { label: "Jobs", path: "/jobs", icon: <Briefcase /> },
 ];

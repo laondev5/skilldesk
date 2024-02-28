@@ -13,7 +13,7 @@ const page = () => {
               handful of model sentence structures
             </p>
           </div>
-          <div className="">
+          <div className=" w-[35%] lg:w-[30%]">
             <Image
               src="/completDashboard.svg"
               alt="complete"
