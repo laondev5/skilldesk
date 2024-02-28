@@ -25,7 +25,7 @@ const CompleteRegistrationButton = () => {
         </div>
         <div>
           <Button variant="main" size="default">
-            <Link href="#">Complete Registration</Link>
+            <Link href="/completeRegistration">Complete Registration</Link>
           </Button>
         </div>
       </div>

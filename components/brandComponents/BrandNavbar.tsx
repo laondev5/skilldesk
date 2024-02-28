@@ -3,10 +3,9 @@ import { Button } from "../ui/button";
 import ProfileButton from "../ui/ProfileButton";
 import Container from "../Container";
 import Link from "next/link";
-import { Bell } from "lucide-react";
-import { Menu } from "lucide-react";
-import { X } from "lucide-react";
+import { Bell, Menu, X, Plus } from "lucide-react";
 import Image from "next/image";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 
 interface AnotherComponentProps {
   mobileOpen: boolean;
@@ -48,9 +47,26 @@ const BrandNavbar: React.FC<AnotherComponentProps> = ({
             </div>
           </div>
           <div className="flex items-center space-x-6">
-            <Button variant="ghost" size="icon">
-              <Bell />
+            {/* create job */}
+            <Button asChild variant="ghost" size="icon">
+              <Link href="/createTask">
+                <Plus />
+              </Link>
             </Button>
+
+            {/* notification */}
+            <Sheet>
+              <SheetTrigger>
+                <Button variant="ghost" size="icon">
+                  <Bell />
+                </Button>
+              </SheetTrigger>
+              <SheetContent>
+                <nav className=" relative flex flex-col mx-6 space-y-4 lg:space-x-6 h-screen w-[90%] lg:w-[23%]"></nav>
+              </SheetContent>
+            </Sheet>
+
+            {/* profile */}
             <div className="ml-3 relative">
               <ProfileButton />
             </div>
